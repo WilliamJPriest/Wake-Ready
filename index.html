@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wake Ready</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="clocksAndAlarms.js" defer></script>
+    <script src="quoteApi.js" defer></script>    
+    <script src="https://use.fontawesome.com/b042b9f677.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Wake Ready</h1>
+            <div class="social-links">
+                <a href="https://www.instagram.com/williamj.priest/" class="fa fa-instagram" aria-hidden="false"></i></a>
+                <a href="https://github.com/WilliamJPriest"><i class="fa fa-github" aria-hidden="false"></i></a>
+                <a href="https://www.linkedin.com/in/william-j-priest-5aa7341a2/"><i class="fa fa-linkedin" aria-hidden="false"></i></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+       <div id="first-wave">
+            <div id="clock-container">
+                <div id="clock">
+                    <!-- Needs some kind of clock svg -->
+                </div> 
+                </div> 
+                <div id="date-info">
+                    <!-- todays date -->
+                </div>   
+            </div>
+        </div> 
+        <div id="layered-wave">
+            <div id="layout">
+                <div id="quote-container">
+                    <div id="quote">
+                        <!-- quote here -->
+                    </div>
+                </div>
+                <div id="alarm-section">
+                    <h3> Alarms</h3>
+                    <div id="all-alarms">
+                        <div class="alarm-container">
+                            <div class="alarm-info">
+                                <h4>Time</h4>
+                                <p>Challenge Type</p>
+                                <button class="delete-alarm-btn">Delete Alarm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="alarm-options">
+                        <button id="open-modal-btn">
+                            Set Alarm
+                        </button>
+                    </div>
+            </div>
+        </div>   
+            <div id="modal-bg">
+                <div id="alarm-challenge-modal">
+                    <div id="slide-select-container">
+                        <ul id="hour-select">
+                            <li class="active">11</li>
+                            <li>12</li>
+                            <li>01</li>
+                            <li>02</li>
+                            <li>03</li>
+                            <li>04</li>
+                            <li>05</li>
+                            <li>06</li>
+                            <li>07</li>
+                            <li>08</li>
+                            <li>09</li>
+                            <li>10</li>
+                            <li>11</li>
+                            <li>12</li>
+                            <li>01</li>
+                        </ul>
+                        <ul id="minute-select">
+                            <li class="active">00</li>
+                            <li>01</li>
+                            <li>02</li>
+                            <li>03</li>
+                            <li>04</li>
+                            <li>05</li>
+                            <li>06</li>
+                            <li>07</li>
+                            <li>08</li>
+                            <li>09</li>
+                            <li>10</li>
+                            <li>11</li>
+                            <li>12</li>
+                            <li>13</li>
+                            <li>14</li>
+                            <li>15</li>
+                            <li>16</li>
+                            <li>17</li>
+                            <li>18</li>
+                            <li>19</li>
+                            <li>20</li>
+                            <li>21</li>
+                            <li>22</li>
+                            <li>23</li>
+                            <li>24</li>
+                            <li>25</li>
+                            <li>26</li>
+                            <li>27</li>
+                            <li>28</li>
+                            <li>29</li>
+                            <li>30</li>
+                            <li>31</li>
+                            <li>32</li>
+                            <li>33</li>
+                            <li>34</li>
+                            <li>35</li>
+                            <li>36</li>
+                            <li>37</li>
+                            <li>38</li>
+                            <li>39</li>
+                            <li>40</li>
+                            <li>41</li>
+                            <li>42</li>
+                            <li>43</li>
+                            <li>44</li>
+                            <li>45</li>
+                            <li>46</li>
+                            <li>47</li>
+                            <li>48</li>
+                            <li>49</li>
+                            <li>50</li>
+                            <li>51</li>
+                            <li>52</li>
+                            <li>53</li>
+                            <li>54</li>
+                            <li>55</li>
+                            <li>56</li>
+                            <li>57</li>
+                            <li>58</li>
+                            <li>59</li>
+                            <li>00</li>
+                            <li>01</li>
+                        </ul>
+                        <ul id="am-pm-select">
+                            <li class="active">
+                                Am
+                            </li>
+                            <li>
+                                Pm
+                            </li>
+                        </ul>   
+                    </div>
+                    <div id="select-challenge-container">
+                        <button class='hl'>None</button>
+                        <button>Easy</button>
+                    </div>
+                    <button id="hour-btn-top">^</button>
+                    <button id="hour-btn-bottom">^</button>
+                    <button id="minute-btn-top">^</button>
+                    <button id="minute-btn-bottom">^</button>
+                    <button id="am-pm-btn-top">^</button>
+                    <button id="am-pm-btn-bottom">^</button>
+                    <button id="exit-modal-btn">X</button>
+                    <button id="set-alarm">Confirm Alarm</button>
+                </div>    
+            </div>
+            <div id="solve-challenge-modal-container">
+                <div id="solve-challenge">
+                    <p id="challenge-problem"></p>
+                    <form>
+                        <input id="input-value"type="number">
+                        <button id="user-input">Confirm</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main> 
+    <div id="layered-steps"></div>
+    <footer>
+        <h5>Developed by William J.</h5>
+        <div class="social-links">
+            <a href="https://www.instagram.com/williamj.priest/"><i class="fa fa-instagram" aria-hidden="false"></i></a>
+            <a href="https://github.com/WilliamJPriest"><i class="fa fa-github" aria-hidden="false"></i></a>
+            <a href="https://www.linkedin.com/in/william-j-priest-5aa7341a2/"><i class="fa fa-linkedin" aria-hidden="false"></i></a>
+        </div>
+    </footer> 
+</body>
+</html>

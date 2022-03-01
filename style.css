@@ -1,0 +1,409 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root{
+    --BG: #000;
+    --TXT: #ffffff;
+    --SCY: #00ff46;
+    --HL:#0be847;
+    --DG: #05b033;
+
+}
+
+@font-face {
+    font-family: "myFont";
+    src: url("fonts/digital-7.ttf");
+  }
+
+main{
+    margin-bottom: -5rem;
+}
+
+body{
+    
+    background-color: var(--BG);
+    color: var(--TXT);
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: var(--HL);
+}
+
+h1{
+    margin-left: 0.5rem;;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.social-links{
+    margin: 0.2rem 1rem 0.2rem 0;
+    font-size: 1.2rem;
+}
+
+#clock-container{
+    padding-top:2.8rem;
+}
+
+#clock{
+    font-family: "myFont",'Times New Roman', Times, serif;
+    font-size: clamp(3rem,8vw,15rem);
+    display:flex;
+    justify-content: center;
+    color:var(--SCY);
+}
+
+#clock p{
+    padding:1rem;
+    border: white 2px solid
+}
+
+#date-info{
+    font-family: "myFont",'Times New Roman', Times, serif;
+    display: flex;
+    margin-top:0.5rem;
+    justify-content: center;
+    font-size:clamp(1rem,6vw,3rem)
+}
+
+#first-wave{
+    /* margin-bottom: 6rem; */
+    aspect-ratio: 16/9;
+    /* max-height: 40rem;
+    min-width:100vw; */
+    background:#000 center/cover url("imgs/wave-haikei (1).svg") no-repeat;
+
+}
+
+#layered-wave{
+    aspect-ratio: 16/9;
+    background:#000 center/cover url("imgs/layered-waves-haikei(3).svg") no-repeat;
+
+}
+
+#layout{
+    padding-top: 20rem;
+ 
+}
+
+
+#quote-container{
+    margin: auto;
+    max-width: 25rem;
+    max-height: 300px;
+    background-color: rgba(26, 16, 16,0.5);
+    border-radius: 25px;
+    border: solid 2px var(--HL);
+    overflow: hidden;
+
+}
+
+#quote{
+    margin: 0.5rem 1rem 2rem 1rem;
+    font-size: clamp(0.6rem,6vw,1rem);
+}
+
+#quote h2{
+    margin-bottom: 1rem;
+}
+
+#quote span{
+    font-size:clamp(1rem,6vw,1.5rem);;
+}
+
+#alarm-section{
+    margin-top: 2rem;
+}
+
+#alarm-section >h3{
+    margin-left: 0.2rem;
+    font-size:clamp(1.6rem,6vw,2rem)
+
+}
+.alarm-container{
+    /* font-family: "myFont",'Times New Roman', Times, serif; */
+    font-size: 1rem;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    min-width: 270px;
+    max-height: 300px;
+    background-color: rgba(26, 16, 16,0.5);
+    border-radius: 25px;
+    border: var(--HL) solid 2px ;
+    
+}
+
+.alarm-container button:hover{
+    background-color: #ff0000;
+}
+
+.alarm-info{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+}
+
+button{
+    min-width:5rem;
+    min-height: 3rem;
+    background-color: transparent;
+    border:none;
+    color: white;
+}
+
+/* button:hover{
+    background-color: green;
+} */
+
+#alarm-options{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+}
+
+#open-modal-btn{
+    border:1px solid white;
+    margin-top: 2rem;
+    max-width:20rem;
+    max-height: 10rem;
+}
+
+
+#modal-bg{
+    visibility: hidden;
+    position: fixed;
+    width:100%;
+    height:100vh;
+    left: 0%;
+    top:0%;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(0,0,0,0.5);
+    transition: visibility 0s,opacity 0.5s;
+}
+
+#alarm-challenge-modal{
+    font-family: "myFont",'Times New Roman', Times, serif;
+    visibility: hidden;
+    position: absolute;
+    top:20%;
+    left:3.5%;
+    width:22rem;
+    height:20rem;
+    background-color: rgba(59, 50, 50,0.8);
+    border: var(--SCY) 1px solid;
+
+}
+
+.seen{
+    visibility: visible;
+    /* transition: visibility 2s,opacity 0.5s; */
+}
+
+#slide-select-container{
+    position: relative;
+    margin: 2rem 25%;
+    display: flex;
+    gap: 1.5rem;
+    width: 200px;
+    height:150px;
+    overflow: hidden;
+}
+
+li{
+    list-style: none;
+    font-size:2.5rem;
+    opacity: 0.5;
+    /* background: -webkit-linear-gradient(#fff,rgb(59,59,59));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+}
+
+.active {
+    color:gold;
+    opacity: 1;
+}
+
+/* .hl{
+    background-color: green;
+} */
+
+#select-challenge-container{
+    margin-left:4rem;
+}
+
+#hour-btn-bottom{
+    position: absolute;
+    top:55%;
+    left:20%;
+    font-size: 2rem;
+    transform: rotate(180deg);
+}
+
+#hour-btn-top{
+    position: absolute;
+    top:0%;
+    left:20%;
+    font-size: 2rem;
+}
+
+#minute-btn-bottom{
+    position: absolute;
+    top:55%;
+    left:35%;
+    font-size: 2rem;
+    transform: rotate(180deg);
+}
+
+#minute-btn-top{
+    position: absolute;
+    top:0%;
+    left:35%;
+    font-size: 2rem;
+}
+#am-pm-btn-bottom{
+    position: absolute;
+    top:55%;
+    left:55%;
+    font-size: 2rem;
+    transform: rotate(180deg)
+}
+#am-pm-btn-top{
+    position: absolute;
+    top:0%;
+    left:55%;
+    font-size: 2rem;
+}
+
+
+#hour-btn-top:hover,#hour-btn-bottom:hover,#minute-btn-top:hover,#minute-btn-bottom:hover,
+#am-pm-btn-top:hover,#am-pm-btn-bottom:hover{
+    color:var(--DG);
+}
+
+#exit-modal-btn{
+    color:red;
+    position: absolute;
+    font-size:1.5rem;
+    top:5%;
+    left:-5%;
+}
+
+#exit-modal-btn:hover{
+    top:5%;
+    left:1%;
+    color:black;
+    width:40px;
+    font-size:2rem;
+    background-color: red;
+}
+
+#set-alarm{
+    position: absolute;
+    top:50%;
+    left:70%;
+}
+
+#set-alarm:hover,#select-challenge-container>button:hover,#select-challenge-container>button:focus,#open-modal-btn:hover{
+    background-color: var(--DG);
+    border:none;
+}
+
+#solve-challenge-modal-container{
+    visibility: hidden;
+    position: absolute;
+    top:20%;
+    left:3.5%;
+    width:22rem;
+    height:6rem;
+    background-color: rgba(59, 50, 50,0.5);
+    border: white 1px solid;
+    font-size:2rem;
+}
+
+#solve-challenge{
+    display:flex;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input{
+    width:3rem;
+    height:3rem;
+    margin-left:1rem;
+}
+
+#user-input:hover{
+    background-color: var(--HL)
+    ;
+
+}
+
+#layered-steps{
+    aspect-ratio: 16/9;
+    background:center/cover url("imgs/layered-steps-haikei(3).svg") no-repeat;
+
+}
+
+footer{
+    /* position: absolute; */
+    display: flex;
+    height: 20vh;;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff0000;
+   
+}
+
+footer h5{
+    padding-bottom: 2rem;
+}
+
+@media only screen and (min-width: 700px) {
+    main{
+        margin-bottom: -20rem;
+    }
+    
+    #layout{
+        display: flex;
+        justify-content: space-evenly;
+        gap:1rem;
+    }
+    #quote-container{
+        margin:0rem;
+        
+    }
+    #alarm-container{
+        margin: 0rem;
+    }
+    #footer{
+        margin-top:3rem;
+    }
+    #alarm-challenge-modal{
+        left:40%;
+
+    }
+}
